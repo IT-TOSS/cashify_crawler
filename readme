@@ -1,0 +1,107 @@
+Cashify Price Extraction Automation
+
+This Python script automates the extraction of product pricing from Cashify using Selenium WebDriver. It reads input data from a CSV file, navigates through specific steps on the website, and records the extracted price back into the CSV.
+
+Features
+
+Automates navigation through Cashify's valuation process.
+
+Reads input parameters (URLs, dropdown selections, radio button values) from a CSV file.
+
+Extracts and appends product prices to the CSV with a timestamp.
+
+Prerequisites
+
+Python 3.7+
+
+Google Chrome browser
+
+ChromeDriver (matching the installed Chrome version)
+
+Installation
+
+Clone the Repository:
+
+git clone https://github.com/your-username/cashify-price-extraction.git
+cd cashify-price-extraction
+
+Install Dependencies:
+
+pip install -r requirements.txt
+
+Dependencies include:
+
+pandas
+
+selenium
+
+Usage
+
+Using Python Script
+
+Prepare Input CSV: Ensure the CSV file has the following columns:
+
+Column A: Links (URLs)
+
+Column B: Step 2 values
+
+Columns C-E: Dropdown selections
+
+Columns F-G: Step 5 radio button selections
+
+Columns H-J: Step 6 radio button selections
+
+Run the Script:
+
+python script_name.py
+
+Follow Instructions:
+
+Enter the path to the CSV file when prompted.
+
+Log in to Cashify manually and press Enter to continue.
+
+Output:
+
+Extracted prices will be saved in the input CSV under a new column with the current date.
+
+Using Executable (Windows)
+
+Navigate to the dist folder.
+
+Double-click on cashify.exe to run the program.
+
+Follow on-screen instructions for CSV input and login.
+
+Example CSV Format
+
+Links,Step 2,Dropdown 1,Dropdown 2,Dropdown 3,Radio 1,Radio 2,Radio 3,Radio 4,Radio 5
+https://www.cashify.in/product-1,Option1,Value1,Value2,Value3,Yes,No,Yes,No,Yes
+https://www.cashify.in/product-2,Option2,Value4,Value5,Value6,No,Yes,No,Yes,No
+
+Project Structure
+
+├── dist/
+│   └── cashify.exe          # Windows executable version
+├── script_name.py           # Main automation script
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+└── input.csv                # Input file with URLs and options
+
+Troubleshooting
+
+Ensure ChromeDriver is installed and added to the system PATH.
+
+Match the ChromeDriver version with the installed Chrome browser version.
+
+Increase time.sleep() durations if page load issues occur.
+
+License
+
+This project is licensed under the MIT License.
+
+Acknowledgements
+
+Selenium Documentation
+
+Pandas Documentation
