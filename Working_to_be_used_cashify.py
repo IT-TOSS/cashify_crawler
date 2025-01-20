@@ -108,7 +108,7 @@ def process_link(link, step2_value, dropdown_selection, step5_selection, step6_s
 
         try:
             # Try to select 'flawless'
-            flawless_xpath = f"//div[contains(@class, 'inherit body2') and text()='flawless']"
+            flawless_xpath = f"//div[contains(@class, 'inherit body2') and text()='Flawless']"
             flawless_button = wait.until(EC.element_to_be_clickable((By.XPATH, flawless_xpath)))
             ActionChains(driver).move_to_element(flawless_button).click().perform()
             print("'flawless' radio button clicked.")
